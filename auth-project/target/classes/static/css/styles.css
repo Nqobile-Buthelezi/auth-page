@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url(../images/background-image.jpg)no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    backdrop-filter: blur(40px);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 1000px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(183, 183, 183, 0.2);
+    border-radius: 2em;
+    overflow: hidden;
+    margin: 0 5em;
+}
+
+.col-1 {
+    background: url(../images/background-image.jpg);
+    background-size: cover;
+}
+
+.col-1 img {
+    width: 700px;
+}
+
+.col-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    margin-top: 2.7em;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 22px;
+    color: white;
+    margin-bottom: 50px;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    background-color: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 600px;
+    font-size: 24px;
+    color: white;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.login-box .user-box input:focus ~label,
+.login-box .user-box input:valid ~label {
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+}
+
+.login-box form a {
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    padding: 15px 120px;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.4 ease;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    border: 3px solid white;
+}
+
+.login-box a:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 18px;
+    color: white;
+}
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}

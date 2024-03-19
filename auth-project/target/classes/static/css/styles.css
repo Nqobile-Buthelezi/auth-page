@@ -147,6 +147,30 @@ form {
     color: black;
 }
 
+.socials a {
+    color: white;
+}
+
+.col-1 a {
+    color: white;
+}
+
+.col-1 i {
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    font-size: 24px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    margin-left: 1.5em;
+    margin-top: 1.5em;
+}
+
+.col-1 i:hover {
+    background-color: white;
+    color: black;
+}
+
 @media(max-width:1000px) {
     .container {
         grid-template-columns: repeat(1, 1fr);

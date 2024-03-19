@@ -8,9 +8,11 @@ public class App {
     public static void main( String[] args ) {
         Javalin app = Javalin.create( javalinConfig -> {
             javalinConfig.staticFiles.add("/static", Location.CLASSPATH);
-        })
-                .get("/", ctx -> ctx.redirect("/hello.html"))
-                .start(7070);
+        });
+
+        Routes.configureRoutes(app);
+        
+        app.start(7070);
     }
 
 }

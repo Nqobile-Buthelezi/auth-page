@@ -19,29 +19,29 @@
 
             <div class="login-box">
 
-                <form action="submit">
+                <form id="my_form" action="/signup" method="post">
 
                     <div class="user-box">
-                        <input type="text" required>
-                        <label for="">Username</label>
+                        <input type="text" name="username" id="username" required>
+                        <label for="username">Username</label>
                     </div>
 
                     <div class="user-box">
-                        <input type="password" required>
-                        <label for="">Password</label>
+                        <input type="email" name="email" id="email" required>
+                        <label for="email">Email</label>
                     </div>
 
                     <div class="user-box">
-                        <input type="email" required>
-                        <label for="">Email</label>
+                        <input type="password" name="password" id="password" required>
+                        <label for="password">Password</label>
                     </div>
 
                     <div class="remember">
-                        <input type="checkbox">
+                        <input type="checkbox" name="remember">
                         Remember me
                     </div>
-        
-                    <a href="/signup">Sign Up</a>
+
+                    <a href="javascript:{}" onclick="document.getElementById('my_form').submit();">Sign Up</a>
 
                 </form>
 

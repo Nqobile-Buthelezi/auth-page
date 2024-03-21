@@ -1,7 +1,11 @@
 {
     "cSpell.words": [
+        "AUTOINCREMENT",
         "bangoma",
         "CLASSPATH",
-        "javalin"
-    ]
+        "dotenv",
+        "javalin",
+        "jdbc"
+    ],
+    "java.configuration.updateBuildConfiguration": "automatic"
 }

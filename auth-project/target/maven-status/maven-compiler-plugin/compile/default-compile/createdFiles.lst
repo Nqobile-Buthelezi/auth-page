@@ -1,0 +1,5 @@
+za/co/bangoma/auth/App.class
+za/co/bangoma/auth/AppConfig.class
+za/co/bangoma/auth/Database.class
+za/co/bangoma/auth/UserController.class
+za/co/bangoma/auth/Routes.class

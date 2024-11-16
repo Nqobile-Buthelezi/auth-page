@@ -1,6 +1,8 @@
-package za.co.bangoma.auth;
+package za.co.bangoma.auth.web;
 
 import io.javalin.Javalin;
+import za.co.bangoma.auth.controller.UserController;
+
 import org.jetbrains.annotations.NotNull;
 
 

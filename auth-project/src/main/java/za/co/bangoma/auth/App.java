@@ -1,5 +1,6 @@
 package za.co.bangoma.auth;
 
+import za.co.bangoma.auth.config.AppConfig;
 
 public class App {
 

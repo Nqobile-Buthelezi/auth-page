@@ -1,10 +1,12 @@
-package za.co.bangoma.auth;
+package za.co.bangoma.auth.config;
 
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
+import za.co.bangoma.auth.web.Routes;
 
 
 public class AppConfig {
+
     // Creating our Javalin app and configuring the routes
     public static Javalin createApp() {
         Javalin app = Javalin.create( JavalinConfiguration -> 

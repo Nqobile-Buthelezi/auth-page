@@ -1,4 +1,4 @@
-package za.co.bangoma.auth;
+package za.co.bangoma.auth.controller;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,6 +8,8 @@ import org.jetbrains.annotations.NotNull;
 
 import io.javalin.http.BadRequestResponse;
 import io.javalin.http.Context;
+import za.co.bangoma.auth.infrastructure.Database;
+import za.co.bangoma.auth.model.User;
 
 import java.sql.Connection;
 

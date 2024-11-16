@@ -1,4 +1,4 @@
-package za.co.bangoma.auth;
+package za.co.bangoma.auth.model;
 
 
 public class User {

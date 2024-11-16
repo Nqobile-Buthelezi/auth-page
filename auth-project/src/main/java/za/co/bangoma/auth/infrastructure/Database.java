@@ -1,4 +1,4 @@
-package za.co.bangoma.auth;
+package za.co.bangoma.auth.infrastructure;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,6 +6,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
+import za.co.bangoma.auth.config.AppConfig;
 
 public class Database {
 

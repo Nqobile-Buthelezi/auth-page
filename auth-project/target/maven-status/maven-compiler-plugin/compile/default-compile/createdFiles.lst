@@ -1,5 +1,11 @@
 za/co/bangoma/auth/App.class
-za/co/bangoma/auth/AppConfig.class
-za/co/bangoma/auth/Database.class
-za/co/bangoma/auth/UserController.class
-za/co/bangoma/auth/Routes.class
+za/co/bangoma/auth/config/AppConfig.class
+za/co/bangoma/auth/web/Routes.class
+za/co/bangoma/auth/controller/UserCredentials.class
+za/co/bangoma/auth/infrastructure/Database.class
+za/co/bangoma/auth/service/UserService.class
+za/co/bangoma/auth/controller/UserValidator.class
+za/co/bangoma/auth/infrastructure/repository/UserRepository.class
+za/co/bangoma/auth/controller/UserResponseHandler.class
+za/co/bangoma/auth/model/User.class
+za/co/bangoma/auth/controller/UserController.class

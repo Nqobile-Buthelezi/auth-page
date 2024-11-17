@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import za.co.bangoma.auth.config.AppConfig;
+import za.co.bangoma.auth.model.User;
 
 public class Database {
 
@@ -66,6 +67,19 @@ public class Database {
             e.printStackTrace();
             throw new RuntimeException("Failed to create the table.");
         }
+    }
+
+    public static User extractUser( java.sql.ResultSet resultSet ) throws SQLException
+    {
+        if ( resultSet.next() )
+        {
+            return new User(
+                resultSet.getString("username"),
+                resultSet.getString("email"),
+                resultSet.getString("password")
+            );
+        }
+        return null;
     }
     
 }

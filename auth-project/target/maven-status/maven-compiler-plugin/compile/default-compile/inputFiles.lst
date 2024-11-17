@@ -1,5 +1,11 @@
-/home/nqobile/Documents/Java-Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/App.java
-/home/nqobile/Documents/Java-Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/Database.java
-/home/nqobile/Documents/Java-Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/Routes.java
-/home/nqobile/Documents/Java-Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/AppConfig.java
-/home/nqobile/Documents/Java-Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/UserController.java
+/home/nqobile/Documents/Github Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/controller/UserCredentials.java
+/home/nqobile/Documents/Github Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/web/Routes.java
+/home/nqobile/Documents/Github Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/infrastructure/Database.java
+/home/nqobile/Documents/Github Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/infrastructure/repository/UserRepository.java
+/home/nqobile/Documents/Github Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/controller/UserController.java
+/home/nqobile/Documents/Github Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/config/AppConfig.java
+/home/nqobile/Documents/Github Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/model/User.java
+/home/nqobile/Documents/Github Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/controller/UserValidator.java
+/home/nqobile/Documents/Github Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/App.java
+/home/nqobile/Documents/Github Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/controller/UserResponseHandler.java
+/home/nqobile/Documents/Github Projects/auth-page/auth-project/src/main/java/za/co/bangoma/auth/service/UserService.java

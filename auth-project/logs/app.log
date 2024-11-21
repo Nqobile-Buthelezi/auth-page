@@ -88,3 +88,8 @@
 15:11:36.841 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
 15:11:37.927 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
 15:11:38.224 [main] INFO  za.co.bangoma.auth.config.AppConfig - Configuration complete, App ready on port 7070
+21:37:28.577 [main] INFO  za.co.bangoma.auth.config.ConfigurationManager - Configuration loaded successfully
+21:37:28.720 [main] INFO  za.co.bangoma.auth.config.AppConfig - Static files directory configured: /home/nqobile/Documents/Github Projects/auth-page/auth-project/src/main/resources/static
+21:37:28.813 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+21:37:29.059 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+21:37:29.107 [main] INFO  za.co.bangoma.auth.config.AppConfig - Configuration complete, App ready on port 7070

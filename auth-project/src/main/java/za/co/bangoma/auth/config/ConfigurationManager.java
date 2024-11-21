@@ -3,6 +3,7 @@ package za.co.bangoma.auth.config;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -76,7 +77,9 @@ public class ConfigurationManager {
      */
     public String getDatabaseDirectory() 
     {
-        return System.getProperty( "user.dir" ) + properties.getProperty( "database.directory" );
+        String staticPath = properties.getProperty( "database.directory" )
+        .replace("${file.separator}", File.separator);
+        return System.getProperty( "user.dir" ) + staticPath;
     }
 
     /**
@@ -89,7 +92,8 @@ public class ConfigurationManager {
     {
         return properties.getProperty( "database.url" )
                 .replace( "${database.directory}", getDatabaseDirectory() )
-                .replace( "${database.name}", properties.getProperty( "database.name" ) );
+                .replace( "${database.name}", properties.getProperty( "database.name" ) )
+                .replace( "${file.separator}", File.separator );
     }
 
     /**
@@ -99,9 +103,11 @@ public class ConfigurationManager {
      * @return The complete path to the static files directory
      */
     public String getStaticFilesDirectory() 
-    {
-        return System.getProperty( "user.dir" ) + properties.getProperty( "static.files.directory" );
-    }
+{
+    String staticPath = properties.getProperty("static.files.directory")
+        .replace("${file.separator}", File.separator);
+    return System.getProperty("user.dir") + staticPath;
+}
 
     /**
      * Retrieves a property value by its key.

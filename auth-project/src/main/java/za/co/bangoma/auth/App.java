@@ -4,7 +4,8 @@ import za.co.bangoma.auth.config.AppConfig;
 
 public class App {
 
-    public static void main( String[] args ) {
+    public static void main( String[] args ) 
+    {
         AppConfig.getInstance().start();
     }
 

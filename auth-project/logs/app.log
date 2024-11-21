@@ -1,0 +1,90 @@
+07:27:30.075 [main] INFO  za.co.bangoma.auth.config.ConfigurationManager - Configuration loaded successfully
+07:27:30.137 [main] INFO  za.co.bangoma.auth.config.AppConfig - Static files directory configured: C:\Users\nqobilebuthelezi\Downloads\auth-page-main\auth-page-main\auth-project\src\main\resources\static
+07:27:30.184 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+07:27:30.419 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+07:27:30.444 [main] INFO  za.co.bangoma.auth.config.AppConfig - Application configuration completed
+07:34:14.008 [main] INFO  za.co.bangoma.auth.config.ConfigurationManager - Configuration loaded successfully
+07:34:14.063 [main] INFO  za.co.bangoma.auth.config.AppConfig - Static files directory configured: C:\Users\nqobilebuthelezi\Downloads\auth-page-main\auth-page-main\auth-project\src\main\resources\static
+07:34:14.107 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+07:34:14.313 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+07:34:14.325 [main] INFO  za.co.bangoma.auth.config.AppConfig - Application configuration completed
+07:35:16.962 [JettyServerThreadPool-23] INFO  za.co.bangoma.auth.service.UserService - Attempting to create new user: Nqobile
+07:35:17.005 [JettyServerThreadPool-23] INFO  za.co.bangoma.auth.service.UserService - User created successfully: Nqobile
+07:35:17.007 [JettyServerThreadPool-23] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User created successfully!
+08:22:33.059 [main] INFO  za.co.bangoma.auth.config.ConfigurationManager - Configuration loaded successfully
+08:22:33.121 [main] INFO  za.co.bangoma.auth.config.AppConfig - Static files directory configured: C:\Users\nqobilebuthelezi\Downloads\auth-page-main\auth-page-main\auth-project\src\main\resources\static
+08:22:33.205 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+08:22:33.414 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+08:22:33.433 [main] INFO  za.co.bangoma.auth.config.AppConfig - Application configuration completed
+08:22:47.252 [JettyServerThreadPool-20] INFO  za.co.bangoma.auth.service.UserService - Searching for user: Nqobile
+08:22:47.266 [JettyServerThreadPool-20] INFO  za.co.bangoma.auth.service.UserService - User  found: Nqobile
+08:22:47.267 [JettyServerThreadPool-20] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User authenticated successfully!
+08:22:59.181 [JettyServerThreadPool-23] INFO  za.co.bangoma.auth.service.UserService - Searching for user: Nqobile
+08:22:59.183 [JettyServerThreadPool-23] WARN  za.co.bangoma.auth.service.UserService - User not found: Nqobile
+08:22:59.184 [JettyServerThreadPool-23] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User authenticated successfully!
+08:37:17.310 [main] INFO  za.co.bangoma.auth.config.ConfigurationManager - Configuration loaded successfully
+08:37:17.511 [main] INFO  za.co.bangoma.auth.config.AppConfig - Static files directory configured: C:\Users\nqobilebuthelezi\Downloads\auth-page-main\auth-page-main\auth-project\src\main\resources\static
+08:37:17.816 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+08:37:18.677 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+08:37:18.847 [main] INFO  za.co.bangoma.auth.config.AppConfig - Application configuration completed
+08:37:55.723 [JettyServerThreadPool-23] INFO  za.co.bangoma.auth.service.UserService - Attempting to create new user: w
+08:37:55.801 [JettyServerThreadPool-23] INFO  za.co.bangoma.auth.service.UserService - User created successfully: w
+08:37:55.801 [JettyServerThreadPool-23] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User created successfully!
+08:38:02.480 [JettyServerThreadPool-20] INFO  za.co.bangoma.auth.service.UserService - Searching for user: w
+08:38:02.534 [JettyServerThreadPool-20] INFO  za.co.bangoma.auth.service.UserService - User  found: w
+08:38:02.534 [JettyServerThreadPool-20] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User authenticated successfully!
+08:38:12.637 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.service.UserService - Searching for user: w
+08:38:12.637 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.service.UserService - User  found: w
+08:38:12.637 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User authenticated successfully!
+08:40:34.784 [JettyServerThreadPool-21] INFO  za.co.bangoma.auth.service.UserService - Searching for user: w
+08:40:34.791 [JettyServerThreadPool-21] WARN  za.co.bangoma.auth.service.UserService - User not found: w
+08:40:34.793 [JettyServerThreadPool-21] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User authenticated successfully!
+09:51:44.388 [main] INFO  za.co.bangoma.auth.config.ConfigurationManager - Configuration loaded successfully
+09:51:44.460 [main] INFO  za.co.bangoma.auth.config.AppConfig - Static files directory configured: C:\Users\nqobilebuthelezi\Downloads\auth-page-main\auth-page-main\auth-project\src\main\resources\static
+09:51:44.524 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+09:51:44.795 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+09:51:44.844 [main] INFO  za.co.bangoma.auth.config.AppConfig - Application configuration completed
+09:52:05.475 [JettyServerThreadPool-19] INFO  za.co.bangoma.auth.service.UserService - Attempting to create new user: Nqobile
+09:52:05.494 [JettyServerThreadPool-19] WARN  za.co.bangoma.auth.service.UserService - Failed to create user - username already exists: Nqobile
+10:16:43.549 [main] INFO  za.co.bangoma.auth.config.ConfigurationManager - Configuration loaded successfully
+10:16:43.615 [main] INFO  za.co.bangoma.auth.config.AppConfig - Static files directory configured: C:\Users\nqobilebuthelezi\Downloads\auth-page-main\auth-page-main\auth-project\src\main\resources\static
+10:16:43.699 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+10:16:44.009 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+10:16:44.052 [main] INFO  za.co.bangoma.auth.config.AppConfig - Application configuration completed
+10:17:02.525 [JettyServerThreadPool-23] INFO  za.co.bangoma.auth.service.UserService - Attempting to create new user: Nqobile
+10:17:02.542 [JettyServerThreadPool-23] WARN  za.co.bangoma.auth.service.UserService - Failed to create user - username already exists: Nqobile
+10:17:02.542 [JettyServerThreadPool-23] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User creation failed!
+13:54:34.125 [main] INFO  za.co.bangoma.auth.config.ConfigurationManager - Configuration loaded successfully
+13:54:34.246 [main] INFO  za.co.bangoma.auth.config.AppConfig - Static files directory configured: C:\Users\nqobilebuthelezi\Downloads\auth-page-main\auth-page-main\auth-project\src\main\resources\static
+13:54:34.391 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+13:54:34.958 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+13:54:35.143 [main] INFO  za.co.bangoma.auth.config.AppConfig - Application configuration completed
+13:56:10.447 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.service.UserService - Searching for user: Nqobile
+13:56:10.497 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.service.UserService - User  found: Nqobile
+13:56:10.497 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User authenticated successfully!
+13:56:22.879 [JettyServerThreadPool-21] INFO  za.co.bangoma.auth.service.UserService - Attempting to create new user: Nqobile
+13:56:22.879 [JettyServerThreadPool-21] WARN  za.co.bangoma.auth.service.UserService - Failed to create user - username already exists: Nqobile
+13:56:22.895 [JettyServerThreadPool-21] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User creation failed!
+14:00:42.370 [JettyServerThreadPool-19] INFO  za.co.bangoma.auth.service.UserService - Attempting to create new user: bob
+14:00:42.384 [JettyServerThreadPool-19] INFO  za.co.bangoma.auth.service.UserService - User created successfully: bob
+14:00:42.384 [JettyServerThreadPool-19] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User created successfully!
+14:00:55.723 [JettyServerThreadPool-19] INFO  za.co.bangoma.auth.service.UserService - Searching for user: BOB
+14:00:55.725 [JettyServerThreadPool-19] WARN  za.co.bangoma.auth.service.UserService - User not found: BOB
+14:00:55.726 [JettyServerThreadPool-19] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User authenticated successfully!
+14:02:00.082 [JettyServerThreadPool-19] INFO  za.co.bangoma.auth.service.UserService - Searching for user: BOB
+14:02:00.082 [JettyServerThreadPool-19] WARN  za.co.bangoma.auth.service.UserService - User not found: BOB
+14:02:00.082 [JettyServerThreadPool-19] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User authenticated successfully!
+14:02:16.342 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.service.UserService - Attempting to create new user: BOB
+14:02:16.346 [JettyServerThreadPool-22] WARN  za.co.bangoma.auth.service.UserService - Failed to create user - username already exists: BOB
+14:02:16.346 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User creation failed!
+14:03:03.292 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.service.UserService - Attempting to create new user: Dumisani
+14:03:03.304 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.service.UserService - User created successfully: Dumisani
+14:03:03.307 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User created successfully!
+14:03:14.141 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.service.UserService - Searching for user: Dumisani
+14:03:14.141 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.service.UserService - User  found: Dumisani
+14:03:14.141 [JettyServerThreadPool-22] INFO  za.co.bangoma.auth.infrastructure.UserResponseHandler - User authenticated successfully!
+15:11:36.441 [main] INFO  za.co.bangoma.auth.config.ConfigurationManager - Configuration loaded successfully
+15:11:36.572 [main] INFO  za.co.bangoma.auth.config.AppConfig - Static files directory configured: C:\Users\nqobilebuthelezi\Downloads\auth-page-main\auth-page-main\auth-project\src\main\resources\static
+15:11:36.841 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+15:11:37.927 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+15:11:38.224 [main] INFO  za.co.bangoma.auth.config.AppConfig - Configuration complete, App ready on port 7070

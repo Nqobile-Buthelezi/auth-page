@@ -37,3 +37,35 @@
 19:44:23.954 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
 19:44:23.957 [main] WARN  za.co.bangoma.auth.config.ConfigurationLogger - Property not found: login.path
 19:44:24.513 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration complete, App ready on port 7070
+20:04:53.569 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Starting configuration loading process
+20:04:53.581 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration loaded successfully
+20:04:53.582 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
+20:04:53.611 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration complete, App ready on port 7070
+20:04:53.739 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
+20:04:53.819 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+20:04:54.060 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+20:04:54.063 [main] WARN  za.co.bangoma.auth.config.ConfigurationLogger - Property not found: signup-failed.path 
+20:10:13.450 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Starting configuration loading process
+20:10:13.461 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration loaded successfully
+20:10:13.462 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
+20:10:13.478 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration complete, App ready on port 7070
+20:10:13.593 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
+20:10:13.667 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+20:10:13.917 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+20:10:13.919 [main] WARN  za.co.bangoma.auth.config.ConfigurationLogger - Property not found: signup-failed.path 
+20:16:41.065 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Starting configuration loading process
+20:16:41.103 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration loaded successfully
+20:16:41.107 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
+20:16:41.148 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration complete, App ready on port 7070
+20:16:41.334 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
+20:16:41.433 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+20:16:41.713 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+20:16:41.716 [main] WARN  za.co.bangoma.auth.config.ConfigurationLogger - Property not found: signup-failed.path 
+20:18:31.201 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Starting configuration loading process
+20:18:31.217 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration loaded successfully
+20:18:31.218 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
+20:18:31.245 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration complete, App ready on port 7070
+20:18:31.369 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
+20:18:31.460 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+20:18:31.710 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+20:18:32.216 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration complete, App ready on port 7070

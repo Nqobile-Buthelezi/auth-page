@@ -1,133 +1,117 @@
 package za.co.bangoma.auth.config;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-/**
- * Manages application configuration properties using a Singleton pattern.
- * Loads and provides access to configuration settings from a properties file.
- * This class is thread-safe and ensures only one instance exists throughout
- * the application lifecycle.
- */
 public class ConfigurationManager {
-
-    private static final Logger logger = LogManager.getLogger( ConfigurationManager.class );
     private static final ConfigurationManager INSTANCE = new ConfigurationManager();
     private final Properties properties;
+    private final ConfigurationLogger configLogger;
 
-    /**
-     * Private constructor that initializes the configuration properties.
-     * Follows the Singleton pattern to prevent multiple instances.
-     */
-    private ConfigurationManager() 
-    {
+    private ConfigurationManager() {
+        configLogger = ConfigurationLogger.getInstance();
         properties = loadProperties();
     }
 
-    /**
-     * Returns the singleton instance of the ConfigurationManager.
-     * 
-     * @return The singleton instance of ConfigurationManager
-     */
     public static ConfigurationManager getInstance() {
         return INSTANCE;
     }
 
-    /**
-     * Loads configuration properties from the config.properties file.
-     * Throws RuntimeException if the file cannot be found or loaded.
-     * 
-     * @return Properties object containing the configuration settings
-     * @throws RuntimeException if the properties file cannot be found or loaded
-     */
-    private Properties loadProperties() 
-    {
+    private Properties loadProperties() {
         Properties props = new Properties();
-        
-        try ( InputStream input = getClass().getClassLoader()
-                .getResourceAsStream( "config.properties" ) ) 
-        {
-            if ( input == null ) 
-            {
-                logger.error( "Unable to find config.properties" );
-                throw new RuntimeException( "Unable to find config.properties" );
-            }
-            props.load( input );
-            logger.info( "Configuration loaded successfully" );
-        } 
-        catch ( IOException e ) 
-        {
-            logger.error( "Error loading configuration: {}", e.getMessage(), e );
-            throw new RuntimeException( "Error loading configuration", e );
+        try {
+            configLogger.logConfigurationLoadStart();
+            props = loadPropertiesFromFile();
+            configLogger.logConfigurationLoadSuccess();
+        } catch (IOException e) {
+            handleConfigurationError("Error loading configuration", e);
         }
-
         return props;
     }
 
-    /**
-     * Gets the database directory path by combining the user directory
-     * with the configured database directory property.
-     * 
-     * @return The complete path to the database directory
-     */
-    public String getDatabaseDirectory() 
-    {
-        String staticPath = properties.getProperty( "database.directory" )
-        .replace("${file.separator}", File.separator);
-        return System.getProperty( "user.dir" ) + staticPath;
+    private Properties loadPropertiesFromFile() throws IOException {
+        Properties props = new Properties();
+        try (InputStream input = getConfigFileStream()) {
+            validateConfigFile(input);
+            props.load(input);
+        }
+        return props;
     }
 
-    /**
-     * Constructs and returns the complete database URL by replacing placeholders
-     * with actual values from the configuration.
-     * 
-     * @return The complete database URL with resolved placeholders
-     */
-    public String getDatabaseUrl() 
-    {
-        return properties.getProperty( "database.url" )
-                .replace( "${database.directory}", getDatabaseDirectory() )
-                .replace( "${database.name}", properties.getProperty( "database.name" ) )
-                .replace( "${file.separator}", File.separator );
+    private InputStream getConfigFileStream() {
+        return getClass().getClassLoader().getResourceAsStream("config.properties");
     }
 
-    /**
-     * Gets the static files directory path by combining the user directory
-     * with the configured static files directory property.
-     * 
-     * @return The complete path to the static files directory
-     */
-    public String getStaticFilesDirectory() 
-{
-    String staticPath = properties.getProperty("static.files.directory")
-        .replace("${file.separator}", File.separator);
-    return System.getProperty("user.dir") + staticPath;
-}
-
-    /**
-     * Retrieves a property value by its key.
-     * 
-     * @param key The property key to look up
-     * @return The value associated with the key, or null if not found
-     */
-    public String getProperty( String key ) 
-    {
-        return properties.getProperty( key );
+    private void validateConfigFile(InputStream input) {
+        if (input == null) {
+            configLogger.logConfigFileNotFound();
+            throw new RuntimeException("Unable to find config.properties");
+        }
     }
 
-    /**
-     * Gets the configured port number for the application.
-     * 
-     * @return The port number as an integer
-     * @throws NumberFormatException if the port property cannot be parsed as an integer
-     */
-    public int getPort() 
-    {
-        return Integer.parseInt( properties.getProperty( "port" ) );
+    private void handleConfigurationError(String message, Exception e) {
+        configLogger.logConfigurationLoadError(message, e);
+        throw new RuntimeException(message, e);
     }
+
+    public String getDatabaseDirectory() {
+        String directory = buildPath(
+            System.getProperty("user.dir"),
+            getPropertyWithSeparators("database.directory")
+        );
+        configLogger.logDatabaseDirectoryAccess(directory);
+        return directory;
+    }
+
+    public String getDatabaseUrl() {
+        String url = properties.getProperty("database.url")
+                .replace("${database.directory}", getDatabaseDirectory())
+                .replace("${database.name}", properties.getProperty("database.name"))
+                .replace("${file.separator}", File.separator);
+        configLogger.logDatabaseUrlGeneration(url);
+        return url;
+    }
+
+    public String getStaticFilesDirectory() {
+        String directory = buildPath(
+            System.getProperty("user.dir"),
+            getPropertyWithSeparators("static.files.directory")
+        );
+        configLogger.logStaticFilesDirectory();
+        return directory;
+    }
+
+    private String getPropertyWithSeparators(String propertyKey) {
+        return properties.getProperty(propertyKey)
+                .replace("${file.separator}", File.separator);
+    }
+
+    private String buildPath(String basePath, String relativePath) {
+        return basePath + relativePath;
+    }
+
+    public String getProperty(String key) {
+        String value = properties.getProperty(key);
+        if (value != null) {
+            configLogger.logPropertyRetrieval(key, value);
+        } else {
+            configLogger.logPropertyNotFound(key);
+        }
+        return value;
+    }
+
+    public int getPort() {
+        try {
+            int port = Integer.parseInt(getProperty("port"));
+            configLogger.logConfigurationComplete(port);
+            return port;
+        } catch (NumberFormatException e) {
+            configLogger.logInvalidPortConfiguration(getProperty("port"), e);
+            throw new RuntimeException("Invalid port configuration", e);
+        }
+    }
+
+    
 }

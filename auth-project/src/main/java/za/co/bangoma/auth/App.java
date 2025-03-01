@@ -1,6 +1,7 @@
 package za.co.bangoma.auth;
 
 import za.co.bangoma.auth.config.AppConfig;
+import za.co.bangoma.auth.infrastructure.Environment;
 
 /**
  * Main application class that serves as the entry point 
@@ -17,7 +18,7 @@ public class App {
      */
     public static void main( String[] args ) 
     {
-        AppConfig.getInstance().start();
+        AppConfig.getInstance( Environment.DEVELOPMENT ).start();
     }
 
 }

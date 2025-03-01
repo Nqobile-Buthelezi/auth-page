@@ -3,6 +3,8 @@ package za.co.bangoma.auth.config;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import za.co.bangoma.auth.infrastructure.Environment;
+
 public class ConfigurationLogger {
     private static final Logger logger = LogManager.getLogger(ConfigurationLogger.class);
     private static final ConfigurationLogger INSTANCE = new ConfigurationLogger();
@@ -73,5 +75,21 @@ public class ConfigurationLogger {
 
     public void logValidationError(String message) {
         logger.error("Validation error: {}", message);
+    }
+
+    public void logConfigurationIsDevelopment() {
+        logger.info( "Configuration mode is development." );
+    }
+
+    public void logConfigurationIsTest() {
+        logger.info( "Configuration mode is test." );
+    }
+
+    public void logConfigurationIsIntegration() {
+        logger.info( "Configuration mode is integration." );
+    }
+
+    public void logInitialisationEnvirnoment(Environment env) {
+        logger.info( "Initialisation environment: {}", env );
     }
 }

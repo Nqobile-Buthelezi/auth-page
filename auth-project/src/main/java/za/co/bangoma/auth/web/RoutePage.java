@@ -6,14 +6,17 @@ public class RoutePage {
 
     private static ConfigurationManager config = ConfigurationManager.getInstance();
 
-    private RoutePage() {}
+    private RoutePage() 
+    {
+        throw new AssertionError( "Utility class - should not be instantiated" );
+    }
 
     // Pages
-    protected static String INDEX_PAGE = config.getProperty( "index.page" );
-    protected static String LOGIN_PAGE = config.getProperty( "login.page" );
-    protected static String LOGIN_FAILED_PAGE = config.getProperty( "login-failed.page" );
-    protected static String SIGNUP_PAGE = config.getProperty( "signup.page" );
-    protected static String SIGNUP_FAILED_PAGE = config.getProperty( "signup-failed.page" );
+    protected static String indexPage = config.getProperty( "index.page" );
+    protected static String loginPage = config.getProperty( "login.page" );
+    protected static String loginFailedPage = config.getProperty( "login-failed.page" );
+    protected static String signupPage = config.getProperty( "signup.page" );
+    protected static String signupFailedPage = config.getProperty( "signup-failed.page" );
     
 
 }

@@ -7,6 +7,15 @@ import org.jetbrains.annotations.NotNull;
 
 public class Routes {
 
+    /**
+     * Uses the Utility class design pattern, 
+     * should not be instantiated.
+     */
+    private Routes() 
+    {
+        throw new AssertionError( "Utility class - should not be instantiated" );
+    }
+
     private static UserController userController = UserController.getInstance();
     
     /**
@@ -21,18 +30,18 @@ public class Routes {
 
     private static void configurePages( Javalin app ) 
     {
-        app.get( RoutePath.INDEX_PATH, ctx -> ctx.redirect( RoutePage.INDEX_PAGE ) );
-        app.get( RoutePath.LOGIN_PATH, ctx -> ctx.redirect( RoutePage.LOGIN_PAGE ) );
-        app.get( RoutePath.LOGIN_FAILED_PATH, ctx -> ctx.redirect( RoutePage.LOGIN_FAILED_PAGE ) );
-        app.get( RoutePath.SIGNUP_PATH, ctx -> ctx.redirect( RoutePage.SIGNUP_PAGE ) );
-        app.get( RoutePath.SIGNUP_FAILED_PATH, ctx -> ctx.redirect( RoutePage.SIGNUP_FAILED_PAGE ) );
+        app.get( RoutePath.indexPath, ctx -> ctx.redirect( RoutePage.indexPage ) );
+        app.get( RoutePath.loginPath, ctx -> ctx.redirect( RoutePage.loginPage ) );
+        app.get( RoutePath.loginFailedPath, ctx -> ctx.redirect( RoutePage.loginFailedPage ) );
+        app.get( RoutePath.signupPath, ctx -> ctx.redirect( RoutePage.signupPage ) );
+        app.get( RoutePath.signupFailedPath, ctx -> ctx.redirect( RoutePage.signupFailedPage ) );
     }
 
     private static void configureAPIRoutes( Javalin app ) 
     {
-        app.post( RoutePath.SIGNUP_PATH, userController::create );
-        app.post( RoutePath.LOGIN_PATH, userController::authenticate );
-        app.post( RoutePath.DELETE_PATH, userController::deleteAllUsers );
+        app.post( RoutePath.signupPath, userController::create );
+        app.post( RoutePath.loginPath, userController::authenticate );
+        app.post( RoutePath.deletePath, userController::deleteAllUsers );
     }
 
 }

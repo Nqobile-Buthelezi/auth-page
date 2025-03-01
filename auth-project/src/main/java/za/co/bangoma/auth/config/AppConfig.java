@@ -9,7 +9,10 @@ import za.co.bangoma.auth.web.Routes;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.EnumMap;
+import java.util.Map;
 import java.io.IOException;
+import za.co.bangoma.auth.infrastructure.Environment;
 
 /**
  * Configuration class for the application that manages static file serving and server initialisation.
@@ -19,18 +22,22 @@ public class AppConfig {
 
     private static final ConfigurationManager config = ConfigurationManager.getInstance();
     private static final ConfigurationLogger configLogger = ConfigurationLogger.getInstance();
-    private static final AppConfig INSTANCE = new AppConfig();
+
+    // Store a separate instance per environment
+    private static final Map<Environment, AppConfig> instances = new EnumMap<>( Environment.class );
 
     private final String staticFilesDirectory;
     private final int port;
     private final Javalin app;
-
+    private final Environment environment;
+    
     /**
      * Private constructor to prevent direct instantiation.
      * Initialises the static files directory, port, and Javalin application instance.
      */
-    private AppConfig() 
+    private AppConfig( Environment environment ) 
     {
+        this.environment = environment;
         this.staticFilesDirectory = config.getStaticFilesDirectory();
         this.port = config.getPort();
         this.app = initialiseApp();
@@ -39,9 +46,12 @@ public class AppConfig {
     /**
      * @return The singleton instance of AppConfig
      */
-    public static AppConfig getInstance() 
+    public static synchronized AppConfig getInstance( Environment environment ) 
     {
-        return INSTANCE;
+        return instances.computeIfAbsent( environment, env -> {
+            configLogger.logInitialisationEnvirnoment( env );
+            return new AppConfig( env );
+        });
     }
 
     /**

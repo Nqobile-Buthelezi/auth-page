@@ -16,7 +16,8 @@ public class CredentialService {
 
     private CredentialService() {}
 
-    public static CredentialService getInstance() {
+    public static CredentialService getInstance() 
+    {
         return INSTANCE;
     }
 

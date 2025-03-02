@@ -89,7 +89,7 @@ public class ConfigurationLogger {
         logger.info( "Configuration mode is integration." );
     }
 
-    public void logInitialisationEnvirnoment(Environment env) {
+    public void logInitialisationEnvirnoment( Environment env ) {
         logger.info( "Initialisation environment: {}", env );
     }
 }

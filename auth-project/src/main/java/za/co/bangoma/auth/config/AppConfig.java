@@ -22,9 +22,10 @@ public class AppConfig {
 
     private static final ConfigurationManager config = ConfigurationManager.getInstance();
     private static final ConfigurationLogger configLogger = ConfigurationLogger.getInstance();
+    private static final Map<Environment, AppConfig> INSTANCES = new EnumMap<>(Environment.class);
 
     // Store a separate instance per environment
-    private static final Map<Environment, AppConfig> instances = new EnumMap<>( Environment.class );
+    private static AppConfig INSTANCE;
 
     private final String staticFilesDirectory;
     private final int port;
@@ -38,6 +39,7 @@ public class AppConfig {
     private AppConfig( Environment environment ) 
     {
         this.environment = environment;
+        config.setEnvironment( environment );
         this.staticFilesDirectory = config.getStaticFilesDirectory();
         this.port = config.getPort();
         this.app = initialiseApp();
@@ -46,11 +48,16 @@ public class AppConfig {
     /**
      * @return The singleton instance of AppConfig
      */
-    public static synchronized AppConfig getInstance( Environment environment ) 
+    public static synchronized AppConfig getInstance(Environment environment) 
     {
-        return instances.computeIfAbsent( environment, env -> {
+        if ( environment == null ) 
+        {
+            throw new IllegalArgumentException( "Environment cannot be null" );
+        }
+        return INSTANCES.computeIfAbsent( environment, env -> {
+            AppConfig instance = new AppConfig( env );
             configLogger.logInitialisationEnvirnoment( env );
-            return new AppConfig( env );
+            return instance;
         });
     }
 

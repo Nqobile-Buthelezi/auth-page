@@ -5,10 +5,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+import za.co.bangoma.auth.infrastructure.Environment;
+
 public class ConfigurationManager {
     private static final ConfigurationManager INSTANCE = new ConfigurationManager();
     private final Properties properties;
     private final ConfigurationLogger configLogger;
+    private Environment environment = Environment.DEVELOPMENT;
 
     private ConfigurationManager() 
     {
@@ -127,7 +130,8 @@ public class ConfigurationManager {
     {
         try 
         {
-            int port = Integer.parseInt( getProperty( "port.development" ) );
+            String configEnvironmentPort = getProperty( "port." + environment.name().toLowerCase() );
+            int port = Integer.parseInt( configEnvironmentPort );
             configLogger.logConfigurationComplete( port );
             return port;
         } 
@@ -136,6 +140,10 @@ public class ConfigurationManager {
             configLogger.logInvalidPortConfiguration( getProperty( "port" ), e );
             throw new NumberFormatException();
         }
+    }
+
+    public void setEnvironment(Environment environment) {
+        this.environment = environment;
     }
 
     

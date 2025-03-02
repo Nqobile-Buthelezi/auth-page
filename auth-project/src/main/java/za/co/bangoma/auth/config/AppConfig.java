@@ -22,10 +22,7 @@ public class AppConfig {
 
     private static final ConfigurationManager config = ConfigurationManager.getInstance();
     private static final ConfigurationLogger configLogger = ConfigurationLogger.getInstance();
-    private static final Map<Environment, AppConfig> INSTANCES = new EnumMap<>(Environment.class);
-
-    // Store a separate instance per environment
-    private static AppConfig INSTANCE;
+    private static final Map<Environment, AppConfig> INSTANCES = new EnumMap<>( Environment.class );
 
     private final String staticFilesDirectory;
     private final int port;
@@ -62,6 +59,15 @@ public class AppConfig {
     }
 
     /**
+     * Gets the current environment of the application configuration.
+     * @return The current environment
+     */
+    public Environment getEnvironment() 
+    {
+        return this.environment;
+    }
+
+    /**
      * Starts the Javalin application server.
      * Configures routes and starts the server on the specified port.
      */
@@ -70,6 +76,27 @@ public class AppConfig {
         Routes.configureRoutes( app );
         app.start( port );
         configLogger.logConfigurationComplete( port );
+    }
+
+    /**
+     * Stops the Javalin application server gracefully.
+     */
+    public void stop() 
+    {
+        if ( isRunning() )
+        {
+            configLogger.logServerShutdown( port );
+            app.stop();
+        }
+    }
+
+    /**
+     * Checks if the server is running
+     * @return true if the server is running, false otherwise
+     */
+    public boolean isRunning() 
+    {
+        return app != null && !app.jettyServer().server().isStopped();
     }
 
     /**
@@ -203,4 +230,5 @@ public class AppConfig {
         staticFiles.directory = staticFilesDirectory;
         staticFiles.location = Location.EXTERNAL;
     }
+
 }

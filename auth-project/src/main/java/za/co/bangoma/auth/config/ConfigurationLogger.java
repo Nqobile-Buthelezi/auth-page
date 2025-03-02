@@ -92,4 +92,8 @@ public class ConfigurationLogger {
     public void logInitialisationEnvirnoment( Environment env ) {
         logger.info( "Initialisation environment: {}", env );
     }
+
+    public void logServerShutdown(int port) {
+        logger.info( "Server shutdown on port {}", port );
+    }
 }

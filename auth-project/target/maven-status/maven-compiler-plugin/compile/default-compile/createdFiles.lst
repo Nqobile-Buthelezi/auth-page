@@ -7,6 +7,7 @@ za/co/bangoma/auth/service/command/LoginCredentialCommand.class
 za/co/bangoma/auth/model/User.class
 za/co/bangoma/auth/model/SignUpCredentials.class
 za/co/bangoma/auth/model/CredentialType.class
+za/co/bangoma/auth/infrastructure/Environment.class
 za/co/bangoma/auth/App.class
 za/co/bangoma/auth/web/Routes.class
 za/co/bangoma/auth/config/ConfigurationLogger.class

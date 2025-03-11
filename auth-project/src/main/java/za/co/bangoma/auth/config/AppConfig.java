@@ -12,11 +12,15 @@ import java.nio.file.Paths;
 import java.util.EnumMap;
 import java.util.Map;
 import java.io.IOException;
+import java.io.UncheckedIOException;
+
 import za.co.bangoma.auth.infrastructure.Environment;
 
 /**
- * Configuration class for the application that manages static file serving and server initialisation.
- * This class follows the Singleton pattern to ensure only one instance exists throughout the application.
+ * Configuration class for the application that manages static file serving and
+ * server initialisation.
+ * This class follows the Singleton pattern to ensure only one instance exists
+ * throughout the application.
  */
 public class AppConfig {
 
@@ -28,10 +32,11 @@ public class AppConfig {
     private final int port;
     private final Javalin app;
     private final Environment environment;
-    
+
     /**
      * Private constructor to prevent direct instantiation.
-     * Initialises the static files directory, port, and Javalin application instance.
+     * Initialises the static files directory, port, and Javalin application
+     * instance.
      */
     private AppConfig( Environment environment ) 
     {
@@ -43,23 +48,39 @@ public class AppConfig {
     }
 
     /**
-     * @return The singleton instance of AppConfig
+     * Returns a singleton instance of AppConfig for the specified environment.
+     * This method ensures that only one instance of AppConfig exists per
+     * environment
+     * using thread-safe initialization.
+     *
+     * @param environment The environment configuration to be used for this
+     *                    instance.
+     *                    This parameter is required and cannot be null.
+     * @return The singleton instance of AppConfig associated with the specified
+     *         environment
+     * @throws IllegalArgumentException if the environment parameter is null
+     * @see Environment
+     * @since 1.0
+     * @thread.safety This method is thread-safe and synchronized
      */
-    public static synchronized AppConfig getInstance(Environment environment) 
+    public static synchronized AppConfig getInstance( Environment environment ) 
     {
         if ( environment == null ) 
         {
             throw new IllegalArgumentException( "Environment cannot be null" );
         }
-        return INSTANCES.computeIfAbsent( environment, env -> {
-            AppConfig instance = new AppConfig( env );
-            configLogger.logInitialisationEnvirnoment( env );
-            return instance;
-        });
+        return INSTANCES.computeIfAbsent( environment, env -> 
+            {
+                AppConfig instance = new AppConfig( env );
+                configLogger.logInitialisationEnvirnoment( env );
+                return instance;
+            }
+        );
     }
 
     /**
      * Gets the current environment of the application configuration.
+     * 
      * @return The current environment
      */
     public Environment getEnvironment() 
@@ -83,7 +104,7 @@ public class AppConfig {
      */
     public void stop() 
     {
-        if ( isRunning() )
+        if ( isRunning() ) 
         {
             configLogger.logServerShutdown( port );
             app.stop();
@@ -92,6 +113,7 @@ public class AppConfig {
 
     /**
      * Checks if the server is running
+     * 
      * @return true if the server is running, false otherwise
      */
     public boolean isRunning() 
@@ -130,7 +152,8 @@ public class AppConfig {
     }
 
     /**
-     * Configures static file serving settings including directory location and validation.
+     * Configures static file serving settings including directory location and
+     * validation.
      *
      * @param staticFiles StaticFileConfig instance to be configured
      */
@@ -171,8 +194,8 @@ public class AppConfig {
         if ( Files.exists( staticPath ) && !Files.isDirectory( staticPath ) ) 
         {
             throw new IllegalStateException(
-                "Static files path exists but is not a directory: " + staticFilesDirectory
-            );
+                    "Static files path exists but is not a directory: " + staticFilesDirectory
+                    );
         }
         return staticPath;
     }
@@ -203,8 +226,8 @@ public class AppConfig {
         if ( !Files.isReadable( staticPath ) ) 
         {
             throw new IllegalStateException(
-                "Static files directory is not readable: " + staticFilesDirectory
-            );
+                    "Static files directory is not readable: " + staticFilesDirectory
+                );
         }
     }
 
@@ -217,7 +240,7 @@ public class AppConfig {
     private void handleDirectorySetupError( IOException e ) 
     {
         configLogger.logErrorInCreationOfStaticDirectory( e.getMessage() );
-        throw new RuntimeException( e.getMessage(), e) ;
+        throw new UncheckedIOException( e.getMessage(), e );
     }
 
     /**

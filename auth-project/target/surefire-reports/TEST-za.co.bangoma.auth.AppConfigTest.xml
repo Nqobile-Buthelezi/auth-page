@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="za.co.bangoma.auth.web.AppConfigTest" time="1.771" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="za.co.bangoma.auth.AppConfigTest" time="2.039" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ZA"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/nqobile-buthelezi/Documents/GitHub Projects/auth-page/auth-project/target/surefire/surefirebooter-20250302191840122_3.jar /home/nqobile-buthelezi/Documents/GitHub Projects/auth-page/auth-project/target/surefire 2025-03-02T19-18-37_068-jvmRun1 surefire-20250302191840122_1tmp surefire_0-20250302191840122_2tmp"/>
+    <property name="sun.java.command" value="/home/nqobile-buthelezi/Documents/GitHub Projects/auth-page/auth-project/target/surefire/surefirebooter-20250316204531566_3.jar /home/nqobile-buthelezi/Documents/GitHub Projects/auth-page/auth-project/target/surefire 2025-03-16T20-45-31_375-jvmRun1 surefire-20250316204531566_1tmp surefire_0-20250316204531566_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/nqobile-buthelezi/Documents/GitHub Projects/auth-page/auth-project/target/test-classes:/home/nqobile-buthelezi/Documents/GitHub Projects/auth-page/auth-project/target/classes:/home/nqobile-buthelezi/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.0/junit-jupiter-api-5.12.0.jar:/home/nqobile-buthelezi/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/nqobile-buthelezi/.m2/repository/org/junit/platform/junit-platform-commons/1.12.0/junit-platform-commons-1.12.0.jar:/home/nqobile-buthelezi/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/nqobile-buthelezi/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.0/junit-jupiter-engine-5.12.0.jar:/home/nqobile-buthelezi/.m2/repository/org/junit/platform/junit-platform-engine/1.12.0/junit-platform-engine-1.12.0.jar:/home/nqobile-buthelezi/.m2/repository/io/javalin/javalin/6.1.3/javalin-6.1.3.jar:/home/nqobile-buthelezi/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/jetty-server/11.0.20/jetty-server-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/jetty-http/11.0.20/jetty-http-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/jetty-util/11.0.20/jetty-util-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/jetty-io/11.0.20/jetty-io-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/toolchain/jetty-jakarta-servlet-api/5.0.2/jetty-jakarta-servlet-api-5.0.2.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-server/11.0.20/websocket-jetty-server-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/jetty-servlet/11.0.20/jetty-servlet-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/jetty-security/11.0.20/jetty-security-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/jetty-webapp/11.0.20/jetty-webapp-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/jetty-xml/11.0.20/jetty-xml-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-api/11.0.20/websocket-jetty-api-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-common/11.0.20/websocket-jetty-common-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/websocket/websocket-core-common/11.0.20/websocket-core-common-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/websocket/websocket-servlet/11.0.20/websocket-servlet-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/eclipse/jetty/websocket/websocket-core-server/11.0.20/websocket-core-server-11.0.20.jar:/home/nqobile-buthelezi/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.22/kotlin-stdlib-jdk8-1.9.22.jar:/home/nqobile-buthelezi/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.9.22/kotlin-stdlib-1.9.22.jar:/home/nqobile-buthelezi/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/home/nqobile-buthelezi/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.9.22/kotlin-stdlib-jdk7-1.9.22.jar:/home/nqobile-buthelezi/.m2/repository/org/slf4j/slf4j-simple/2.0.10/slf4j-simple-2.0.10.jar:/home/nqobile-buthelezi/.m2/repository/io/github/cdimascio/dotenv-java/2.2.0/dotenv-java-2.2.0.jar:/home/nqobile-buthelezi/.m2/repository/org/xerial/sqlite-jdbc/3.45.0.0/sqlite-jdbc-3.45.0.0.jar:/home/nqobile-buthelezi/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.1/log4j-api-2.24.1.jar:/home/nqobile-buthelezi/.m2/repository/org/apache/logging/log4j/log4j-core/2.24.1/log4j-core-2.24.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -28,12 +28,12 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/nqobile-buthelezi/Documents/GitHub Projects/auth-page/auth-project/target/surefire/surefirebooter-20250302191840122_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/nqobile-buthelezi/Documents/GitHub Projects/auth-page/auth-project/target/surefire/surefirebooter-20250316204531566_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.14+7-Ubuntu-124.04"/>
     <property name="user.name" value="nqobile-buthelezi"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="6.8.0-54-generic"/>
+    <property name="os.version" value="6.8.0-55-generic"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
@@ -54,23 +54,23 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testSingletonGetInstance" classname="za.co.bangoma.auth.web.AppConfigTest" time="0.047">
-    <system-out><![CDATA[2025-03-02 19:18:41 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Starting configuration loading process
-2025-03-02 19:18:41 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration loaded successfully
-2025-03-02 19:18:41 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
-2025-03-02 19:18:41 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration complete, App ready on port 7071
-2025-03-02 19:18:41 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
-2025-03-02 19:18:41 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Initialisation environment: TEST
-2025-03-02 19:18:41 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
-2025-03-02 19:18:42 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
-2025-03-02 19:18:42 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration complete, App ready on port 7071
+  <testcase name="testSingletonGetInstance" classname="za.co.bangoma.auth.AppConfigTest" time="0.041">
+    <system-out><![CDATA[2025-03-16 20:45:33 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Starting configuration loading process
+2025-03-16 20:45:33 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration loaded successfully
+2025-03-16 20:45:33 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
+2025-03-16 20:45:33 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration complete, App ready on port 7071
+2025-03-16 20:45:33 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
+2025-03-16 20:45:33 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Initialisation environment: TEST
+2025-03-16 20:45:33 [main] INFO  za.co.bangoma.auth.service.UserService - Initialising database connection
+2025-03-16 20:45:34 [main] INFO  za.co.bangoma.auth.service.UserService - Database connection initialised successfully
+2025-03-16 20:45:34 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration complete, App ready on port 7071
 ]]></system-out>
     <system-err><![CDATA[[main] INFO io.javalin.Javalin - Starting Javalin ...
 [main] INFO org.eclipse.jetty.server.Server - jetty-11.0.20; built: 2024-01-29T21:04:22.394Z; git: 922f8dc188f7011e60d0361de585fd4ac4d63064; jvm 17.0.14+7-Ubuntu-124.04
 [main] INFO org.eclipse.jetty.server.session.DefaultSessionIdManager - Session workerName=node0
-[main] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@32c0915e{/,null,AVAILABLE}
-[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@2fd1731c{HTTP/1.1, (http/1.1)}{0.0.0.0:7071}
-[main] INFO org.eclipse.jetty.server.Server - Started Server@758f4f03{STARTING}[11.0.20,sto=0] @2364ms
+[main] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2c282004{/,null,AVAILABLE}
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@2a2da905{HTTP/1.1, (http/1.1)}{0.0.0.0:7071}
+[main] INFO org.eclipse.jetty.server.Server - Started Server@27e0f2f5{STARTING}[11.0.20,sto=0] @2844ms
 [main] INFO io.javalin.Javalin - 
        __                  ___           _____
       / /___ __   ______ _/ (_)___      / ___/
@@ -80,19 +80,30 @@
 
        https://javalin.io/documentation
 
-[main] INFO io.javalin.Javalin - Javalin started in 353ms \o/
+[main] INFO io.javalin.Javalin - Javalin started in 393ms \o/
 [main] INFO io.javalin.Javalin - Static file handler added: StaticFileConfig(hostedPath=/, directory=/home/nqobile-buthelezi/Documents/GitHub Projects/auth-page/auth-project/src/main/resources/static, location=EXTERNAL, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, skipFileFunction=Function1<jakarta.servlet.http.HttpServletRequest, java.lang.Boolean>, mimeTypes={}). File system location: '/home/nqobile-buthelezi/Documents/GitHub Projects/auth-page/auth-project/src/main/resources/static'
 [main] INFO io.javalin.Javalin - Listening on http://localhost:7071/
-[main] INFO io.javalin.Javalin - You are running Javalin 6.1.3 (released March 2, 2024. Your Javalin version is 364 days old. Consider checking for a newer version.).
+[main] INFO io.javalin.Javalin - You are running Javalin 6.1.3 (released March 2, 2024. Your Javalin version is 379 days old. Consider checking for a newer version.).
 ]]></system-err>
   </testcase>
-  <testcase name="testSingletonWithDifferentEnvironments" classname="za.co.bangoma.auth.web.AppConfigTest" time="0.014">
-    <system-out><![CDATA[2025-03-02 19:18:42 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
-2025-03-02 19:18:42 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration complete, App ready on port 7072
-2025-03-02 19:18:42 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
-2025-03-02 19:18:42 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Initialisation environment: INTEGRATION
+  <testcase name="testIsRunningAfterServerStop" classname="za.co.bangoma.auth.AppConfigTest" time="0.026">
+    <system-out><![CDATA[2025-03-16 20:45:34 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Server shutdown on port 7071
+]]></system-out>
+    <system-err><![CDATA[[main] INFO io.javalin.Javalin - Stopping Javalin ...
+[main] INFO org.eclipse.jetty.server.Server - Stopped Server@27e0f2f5{STOPPING}[11.0.20,sto=0]
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@2a2da905{HTTP/1.1, (http/1.1)}{0.0.0.0:7071}
+[main] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@2c282004{/,null,STOPPED}
+[main] INFO io.javalin.Javalin - Javalin has stopped
+]]></system-err>
+  </testcase>
+  <testcase name="test_getInstance_returnsConsistentInstanceForSameEnvironment" classname="za.co.bangoma.auth.AppConfigTest" time="0.008"/>
+  <testcase name="testSingletonWithDifferentEnvironments" classname="za.co.bangoma.auth.AppConfigTest" time="0.014">
+    <system-out><![CDATA[2025-03-16 20:45:34 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
+2025-03-16 20:45:34 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Configuration complete, App ready on port 7072
+2025-03-16 20:45:34 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Static files directory configured
+2025-03-16 20:45:34 [main] INFO  za.co.bangoma.auth.config.ConfigurationLogger - Initialisation environment: INTEGRATION
 ]]></system-out>
   </testcase>
-  <testcase name="testEnvironmentConfiguration" classname="za.co.bangoma.auth.web.AppConfigTest" time="0.007"/>
-  <testcase name="testServerIsRunning" classname="za.co.bangoma.auth.web.AppConfigTest" time="0.003"/>
+  <testcase name="testGetInstanceThrowsExceptionForNullEnvironment" classname="za.co.bangoma.auth.AppConfigTest" time="0.006"/>
+  <testcase name="testServerIsRunningOnTestPort" classname="za.co.bangoma.auth.AppConfigTest" time="0.002"/>
 </testsuite>

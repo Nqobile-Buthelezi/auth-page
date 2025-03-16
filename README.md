@@ -16,16 +16,20 @@ To get started, clone this repository:
 
 ```sh
 git clone https://github.com/Nqobile-Buthelezi/auth-page.git
-cd auth-page
+cd auth-page/auth-project/
 ```
 
-Build the repository
+## Build the repository
+
+To build the repository
 
 ```sh
 mvn clean compile
 ```
 
-Run the program
+## Run the program
+
+to execute the program run the App main class or run
 
 ```sh
 mvn exec:java -Dexec.mainClass="za.co.bangoma.auth.App"

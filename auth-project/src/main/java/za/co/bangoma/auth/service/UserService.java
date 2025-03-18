@@ -17,17 +17,11 @@ public class UserService {
 
     private final Database database;
     private static final Logger logger = LogManager.getLogger( UserService.class );
-    private static final UserService INSTANCE = new UserService();
-    private static final UserResponseHandler responseHandler = UserResponseHandler.getInstance();
+    private static final UserResponseHandler responseHandler = new UserResponseHandler();
 
-    private UserService() 
+    public UserService() 
     {
         this.database = initialiseDatabase();
-    }
-
-    public static UserService getInstance() 
-    {
-        return INSTANCE;
     }
 
     /**

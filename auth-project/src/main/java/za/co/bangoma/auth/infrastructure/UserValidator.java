@@ -5,14 +5,6 @@ import za.co.bangoma.auth.model.UserCredentials;
 
 public class UserValidator {
 
-    private static final UserValidator INSTANCE = new UserValidator();
-
-    private UserValidator() {}
-
-    public static UserValidator getInstance() {
-        return INSTANCE;
-    }
-
     /**
      * Validates the user credentials to ensure that they are not empty
      * @param credentials

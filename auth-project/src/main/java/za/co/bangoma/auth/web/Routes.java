@@ -2,6 +2,11 @@ package za.co.bangoma.auth.web;
 
 import io.javalin.Javalin;
 import za.co.bangoma.auth.controller.UserController;
+import za.co.bangoma.auth.infrastructure.UserResponseHandler;
+import za.co.bangoma.auth.infrastructure.UserValidator;
+import za.co.bangoma.auth.service.CredentialService;
+import za.co.bangoma.auth.service.UserService;
+
 import org.jetbrains.annotations.NotNull;
 
 
@@ -16,7 +21,12 @@ public class Routes {
         throw new AssertionError( "Utility class - should not be instantiated" );
     }
 
-    private static UserController userController = UserController.getInstance();
+    private static UserController userController = new UserController ( 
+        new UserService(),
+        new CredentialService(),
+        new UserValidator(),
+        new UserResponseHandler()
+    );
     
     /**
      * Configure the routes for the application

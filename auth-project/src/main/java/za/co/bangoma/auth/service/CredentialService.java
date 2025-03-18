@@ -12,14 +12,6 @@ import za.co.bangoma.auth.service.command.SignupCredentialCommand;
 public class CredentialService {
 
     private static final Logger logger = LogManager.getLogger( CredentialService.class );
-    private static final CredentialService INSTANCE = new CredentialService();
-
-    private CredentialService() {}
-
-    public static CredentialService getInstance() 
-    {
-        return INSTANCE;
-    }
 
     /**
      * Extracts the user credentials from the context

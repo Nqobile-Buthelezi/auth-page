@@ -14,19 +14,20 @@ import za.co.bangoma.auth.service.UserService;
 
 public class UserController {
 
-    private static final UserController INSTANCE = new UserController();
+    private final UserService userService;
+    private final CredentialService credentialService;
+    private final UserValidator validator;
+    private final UserResponseHandler responseHandler;
 
-    private static final UserService userService = UserService.getInstance();
-    private static final CredentialService credentialService = CredentialService.getInstance();
-
-    private static final UserValidator validator = UserValidator.getInstance();
-    private static final UserResponseHandler responseHandler = UserResponseHandler.getInstance();
-
-    private UserController() {}
-
-    public static UserController getInstance() 
+    public UserController( UserService userService, 
+                    CredentialService credentialService, 
+                    UserValidator validator, 
+                    UserResponseHandler responseHandler ) 
     {
-        return INSTANCE;
+        this.userService = userService;
+        this.credentialService = credentialService;
+        this.validator = validator;
+        this.responseHandler = responseHandler;
     }
 
     /**
@@ -50,7 +51,8 @@ public class UserController {
         UserCredentials credentials = credentialService.extractCredentials( ctx, CredentialType.LOGIN );
         validator.validateCredentials( credentials );
         User user = userService.findUser( credentials );
-        responseHandler.handleSuccessfulAuthentication( ctx, user );
+        assert user != null;
+        responseHandler.handleSuccessfulAuthentication( ctx );
     }
 
     /**

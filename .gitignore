@@ -28,6 +28,7 @@ yarn.lock
 dist/
 build/
 out/
+target/
 
 # Logs
 *.log

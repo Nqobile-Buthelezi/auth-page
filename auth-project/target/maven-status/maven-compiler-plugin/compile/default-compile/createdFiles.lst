@@ -1,8 +1,8 @@
 za/co/bangoma/auth/service/command/SignupCredentialCommand.class
 za/co/bangoma/auth/config/AppConfig.class
 za/co/bangoma/auth/infrastructure/UserValidator.class
-za/co/bangoma/auth/infrastructure/UserResponseHandler.class
 za/co/bangoma/auth/model/LoginCredentials.class
+za/co/bangoma/auth/infrastructure/UserResponseHandler.class
 za/co/bangoma/auth/service/command/LoginCredentialCommand.class
 za/co/bangoma/auth/model/User.class
 za/co/bangoma/auth/model/SignUpCredentials.class
@@ -13,9 +13,9 @@ za/co/bangoma/auth/web/Routes.class
 za/co/bangoma/auth/config/ConfigurationLogger.class
 za/co/bangoma/auth/infrastructure/Database.class
 za/co/bangoma/auth/service/UserService.class
+za/co/bangoma/auth/web/RoutePage.class
 za/co/bangoma/auth/service/command/CredentialCommand.class
 za/co/bangoma/auth/config/ConfigurationManager.class
-za/co/bangoma/auth/web/RoutePage.class
 za/co/bangoma/auth/exceptions/DatabaseException.class
 za/co/bangoma/auth/service/CredentialService.class
 za/co/bangoma/auth/model/UserCredentials.class
